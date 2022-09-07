@@ -1,0 +1,13 @@
+[package]
+name = "test_diff_version_crate"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[workspace]
+members = [
+  "crates/dep1"
+]
+[dependencies]
+mytestcrate = "~0.3"
+dep1 = { path = "crates/dep1" }
